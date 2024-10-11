@@ -22,8 +22,8 @@ alert(`You have visited this site ${visitor} times`);
 
 // 3. Declare a variable called birthYear & assign to it your birth year. Show the following message in your browser: 
 
-var birthYear = "My birth year is 1992 <br> Data type of my declared variable is number";
-document.body.innerHTML = birthYear; 
+var birthday = 1990;
+document.body.innerHTML += (`(Ans:3) <br /><br /> My birth year is ${birthday}<br> Data type of my declare variable is number <br/><hr>`)
 
 
 
@@ -36,10 +36,12 @@ document.body.innerHTML = birthYear;
    // c. Quantity i.e. how many products a visitor wants to order 
    //    Show the following message in your browser: “John  Doe ordered 5 T-shirt(s) on XYZ Clothing store”.
 
-var visitorName = " <b> John Doe </b> ordered <b> 5 T-shirt</b>(s) on XYZ clothing store"; 
+var visitorName = "John Doe";
+var productTitle = "T-shirt";
+var quantity = 5;
+document.body.innerHTML += (`(Ans:4)<br/><br/><b> ${visitorName}</b> ordered <b> ${quantity} ${productTitle}</b>(s) on XYZ Clothing store`);
 
-document.body.innerHTML = visitorName;
 
 
 
-//                      ******** END *********
+//                                                 ******** END *********
