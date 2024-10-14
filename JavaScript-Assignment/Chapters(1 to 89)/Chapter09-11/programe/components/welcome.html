@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Welcome Program</title>
+    <style>
+        body {
+            border: solid 3px;
+            color: rgb(16, 18, 18);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            padding: 100px;
+        }
+        input {
+            background-color: rgb(165, 234, 234);
+            margin: 10px;
+            padding: 5px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            background-color: rgb(94, 230, 10);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        h1{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background-color: rgb(111, 211, 175);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>City Welcome Program</h1>
+
+    <label for="city">Enter City Name:</label>
+    <input type="text" id="city" placeholder="Enter city name">
+    <button onclick="checkCity()">Submit</button>
+
+    <div id="message"></div>
+
+    <script>
+        function checkCity() {
+            var city = document.getElementById('city').value.toLowerCase();
+            var message = document.getElementById('message');
+            
+            if (city === 'karachi') {
+                message.textContent = 'Welcome to the City of Lights';
+            } else {
+                message.textContent = 'Welcome!';
+            }
+        }
+    </script>
+
+</body>
+</html>

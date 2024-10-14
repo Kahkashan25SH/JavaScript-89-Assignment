@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal</title>
+    <style>
+        body {
+            background-color: lightcoral;
+            border: solid 1px ;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input {
+            background-color: rgb(205, 185, 223);
+            margin: 10px;
+            padding: 5px;
+        }
+        #message {
+            margin-top: 50px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        h1{
+            margin-bottom: 50px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Traffic Signal Checker</h1>
+
+    <label for="signalColor">Enter Traffic Signal Color:</label>
+    <input type="text" id="signalColor" placeholder="Enter color (e.g., red)">
+    <button onclick="checkSignal()">Check Signal</button>
+
+    <div id="message"></div>
+
+    <script>
+        function checkSignal() {
+            var color = document.getElementById('signalColor').value.toLowerCase();
+            var message = document.getElementById('message');
+            
+            if (color === 'red') {
+                message.textContent = 'Must Stop';
+                message.style.color = 'red';
+            } else if (color === 'yellow') {
+                message.textContent = 'Ready to Move';
+                message.style.color = 'yellow';
+            } else if (color === 'green') {
+                message.textContent = 'Move Now';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Invalid Color! Please enter red, yellow, or green.';
+                message.style.color = 'white';
+            }
+        }
+    </script>
+
+</body>
+</html>
