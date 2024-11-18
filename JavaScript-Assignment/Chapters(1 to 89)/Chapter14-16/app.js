@@ -22,7 +22,7 @@ let student_names = new Array();
 
 // 3. Declare and initialize a strings array
 
-let colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+let color = ['red', 'blue', 'green', 'yellow', 'purple'];
 
 
 
@@ -52,24 +52,29 @@ let mixedArray = ['red', 1, true, 'blue', 2, false];
 // 7. Declare and Initialize an array and store available education qualifications in Pakistan (e.g. SSC, HSC, BCS,
 //    BS, BCOM, MS, M.Phil., PhD). Show the listed qualifications in your browser like:
 
+
+                       console.log("Ans#_7: Qulification:");
 let education = ['SSC', 'HSC', 'BCS', 'BS', 'BCOM', 'MS', 'M.Phil.', 'PhD']; 
-console.log("Ans#_7: Qulification:");
 console.log(education);
+
+
+
+
 
 
 
 // 8. Write a program to store 3 student names in an array.Take another array to store score of these three students.
 //    Assume that total marks are 500 for each student, display the scores & percentages of students like:
  
-                  console.log("Ans#-8");
+                  console.log("Ans-8");
                   
 
 let studentNames = ['mohid', 'Ali', 'neha'];
-let studentScores = [320, 230, 480];
+let studentScore = [320, 230, 480];
 
 for (let i = 0; i < studentNames.length; i++) {
-    let percentage = (studentScores[i] / 500) * 100;
-    console.log(`${studentNames[i]}: Score - ${studentScores[i]}, Percentage - ${percentage}%`);
+    let percentage = (studentScore[i] / 500) * 100;
+    console.log(`${studentNames[i]}: Score - ${studentScore[i]}, Percentage - ${percentage}%`);
 }
 
 
@@ -87,8 +92,9 @@ for (let i = 0; i < studentNames.length; i++) {
 // g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index.
 //    Display the updated array in your browser.
 
+                                   document.write("<b /> Ans_9 <br /><hr />");
 
-let color = ["Red", "Blue", "Green", "Yellow"];
+let colors = ["Red", "Blue", "Green", "Yellow"];
 document.write("<b>Initial Colors:</b> " + colors.join(", ") + "<br><br>");
 
 let addColorAtStart = prompt("Enter a color to add at the beginning:");
@@ -123,18 +129,19 @@ if (deleteIndex >= 0 && deleteIndex < colors.length && deleteCount > 0) {
     colors.splice(deleteIndex, deleteCount);
     document.write("<b>After Deleting " + deleteCount + " Color(s) from Index " + deleteIndex + ":</b> " + colors.join(", ") + "<br><br>");
 } else {
-    document.write("<b>Invalid Index or Count. No changes made.</b><br><br>");
+    document.write("<b>Invalid Index or Count. No changes made.</b><br><br> <hr />");
 }
 
 
 
 // 10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+                            console.log("Ans_10")
 
-let studentScore = [78, 45, 89, 62, 90, 55];
-document.write("<b>Original Scores:</b> " + studentScores.join(", ") + "<br><br>");
+let studentScores = [78, 45, 89, 62, 90, 55];
+console.log("Original Scores: " + studentScores.join(", "));
 
 studentScores.sort((a, b) => a - b); 
-document.write("<b>Sorted Scores in Ascending Order:</b> " + studentScores.join(", "));
+console.log("Sorted Scores in Ascending Order: " + studentScores.join(", "));
 
 
 
@@ -142,6 +149,9 @@ document.write("<b>Sorted Scores in Ascending Order:</b> " + studentScores.join(
 
 
 // 11. Write a program to initialize an array with city names.Copy 3 array elements from cities array to selectedCities array.
+
+                               console.log("Ans-11");
+                               
 
 let cities = ['London', 'Paris', 'Tokyo', 'New York', 'Sydney', 'Berlin', 'Moscow'];
 let selectedCities = [];
@@ -160,6 +170,9 @@ console.log(selectedCities);
 // 12. Write a program to create a single string from the below mentioned array: 
 //     var arr = [“This ”, “ is ”, “ my ”, “ cat”]; (Use array’s join method)
 
+                            console.log("Ans_12");
+                            
+
 let arr = ['This ', 'is ', 'my ', 'cat'];
 
 let singleString = arr.join('');
@@ -173,6 +186,7 @@ console.log(singleString);
 
 // 13. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. (FIFO-First In First Out)
 
+                                     document.write('<b /> Ans_13 <br /> <hr />');
 let stack = [];
 stack.push("Apple");
 stack.push("Banana");
@@ -187,7 +201,7 @@ document.write("<b>Updated Array:</b> " + stack.join(", ") + "<br><br>");
 
 let secondOut = stack.shift(); // Removes "Banana"
 document.write("<b>Removed (Second Out):</b> " + secondOut + "<br>");
-document.write("<b>Updated Array:</b> " + stack.join(", ") + "<br>");
+document.write("<b>Updated Array:</b> " + stack.join(", ") + "<br> <hr />");
 
 
 
@@ -196,42 +210,35 @@ document.write("<b>Updated Array:</b> " + stack.join(", ") + "<br>");
 
 // 14. Create a new array. Store values one by one in such a way that you can access the values in reverse order. (Last InFirst Out)
 
-// Initialize an empty array
+                             document.write("<b /> Ans_14 <br /> <hr />")
 let lifoArray = [];
 
-// Add values to the array one by one (Last In)
-lifoArray.push("Apple");
-lifoArray.push("Banana");
-lifoArray.push("Cherry");
-lifoArray.push("Date");
+lifoArray.push("Grapes");
+lifoArray.push("Mango");
+lifoArray.push("Strawberry");
+lifoArray.push("Pomegranate");
 
 document.write("<b>Array after adding values (LIFO):</b> " + lifoArray.join(", ") + "<br><br>");
 
-// Access and remove values in LIFO order (Last Out)
 let firstout = lifoArray.pop(); // Removes "Date"
-document.write("<b>Removed (Last In - First Out):</b> " + firstOut + "<br>");
+document.write("<b>Removed (Last In - First Out):</b> " + firstout + "<br>");
 document.write("<b>Updated Array:</b> " + lifoArray.join(", ") + "<br><br>");
 
 let secondout = lifoArray.pop(); // Removes "Cherry"
-document.write("<b>Removed (Last In - First Out):</b> " + secondOut + "<br>");
-document.write("<b>Updated Array:</b> " + lifoArray.join(", ") + "<br>");
+document.write("<b>Removed (Last In - First Out):</b> " + secondout + "<br>");
+document.write("<b>Updated Array:</b> " + lifoArray.join(", ") + "<br> <hr />");
 
 
 // 15. Write a program to store phone manufacturers (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an array.
 //     Display the following dropdown/select menu in your browser using document.write() method:
 
+                                       document.write("<b /> Ans_15 <br /> <hr />");
 
 // Initialize an array with phone manufacturers
 let phoneManufacturer = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
 
-// Generate the dropdown menu
 document.write("<select>");
 for (let manufacturer of phoneManufacturer) {
     document.write(`<option value="${manufacturer}">${manufacturer}</option>`);
 }
 document.write("</select>");
-
-
-
-
-
